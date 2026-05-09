@@ -356,9 +356,23 @@
         {% if entry.bibtex_coming_soon %}
           <pre><code>Coming soon!</code></pre>
         {% else %}
-          {% highlight bibtex %}
-          {{- entry.bibtex | hideCustomBibtex -}}
-          {% endhighlight %}
+          {% assign LB = "@@LB@@" %}
+          {% assign RB = "@@RB@@" %}
+          {%- capture simple_bibtex -%}
+@{{ entry.type }}{{ LB }}{{ entry.key }},
+  title     = {{ LB }}{{ entry.title }}{{ RB }},
+  author    = {{ LB }}{{ entry.author }}{{ RB }},
+{%- if entry.booktitle %}
+  booktitle = {{ LB }}{{ entry.booktitle }}{{ RB }},
+{%- endif -%}
+{%- if entry.journal %}
+  journal   = {{ LB }}{{ entry.journal }}{{ RB }},
+{%- endif %}
+  year      = {{ LB }}{{ entry.year }}{{ RB }}
+}
+          {%- endcapture -%}
+          {% assign simple_bibtex = simple_bibtex | replace: "@@LB@@", "{" | replace: "@@RB@@", "}" %}
+          {% highlight bibtex %}{{- simple_bibtex -}}{% endhighlight %}
         {% endif %}
       </div>
     {% endif %}
