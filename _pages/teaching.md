@@ -2,11 +2,11 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+description: 
 nav: true
 nav_order: 6
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
-
-Organize your courses by years, topics, or universities, however you like!
+During my undergrad studies at NYU Shanghai, I had the honor to serve as a [Learning Assistant](https://shanghai.nyu.edu/content/course-specific-tutoring) in the Computer Science Discipline:
+- Spring 2026 - *Lead Learning Assistant* - CSCI-SHU 360 Machine Learning & CSCI-SHU 220 Algorithms
+- Fall 2025 - *Learning Assistant* - CSCI-SHU 360 Machine Learning & CSCI-SHU 210 Data Structures
