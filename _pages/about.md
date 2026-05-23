@@ -6,7 +6,7 @@ subtitle: 许御风
 
 profile:
   align: right
-  image: xyf_pic_dc2_sq.png
+  image: xyf_grad_pic_sq.jpg
   image_circular: false # crops the image to make it circular
   # more_info: >
   #   <p>555 your office number</p>
